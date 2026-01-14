@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:descendantFocusability="afterDescendants"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp">
+
+        <CheckBox
+            android:id="@+id/cb_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purple_500"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="top"
+            android:layout_gravity="top"
+            android:layout_marginTop="12dp"
+            android:focusable="false"
+            android:clickable="true"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_system_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2023年12月"
+                android:textSize="10sp"
+                android:textColor="#9E9E9E"
+                android:layout_marginBottom="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:gravity="center_vertical"
+
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工作"
+                    android:textSize="11sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:background="#2196F3"
+
+                    android:layout_marginEnd="8dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_task_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="任务内容"
+                    android:textSize="17sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/tv_task_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间"
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:background="#F5F5F5"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/tv_task_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地点"
+                    android:textSize="12sp"
+                    android:textColor="#00796B"
+                    android:background="#E0F2F1"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sub_tasks_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="4dp"
+                android:visibility="gone">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_edit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="2dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="false"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="#BDBDBD" />
+
+            <ImageView
+                android:id="@+id/iv_calendar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="false"
+                android:padding="7dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:tint="#6200EE" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

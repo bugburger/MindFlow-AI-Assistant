@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_app">#F7F8FA</color>
+    <color name="bg_card">#FFFFFF</color>
+
+    <color name="brand_primary">#2D3436</color> <color name="brand_accent">#0984E3</color>
+
+    <color name="tag_work_bg">#E3F2FD</color>
+    <color name="tag_work_text">#1565C0</color>
+
+    <color name="tag_study_bg">#FFF3E0</color>
+    <color name="tag_study_text">#EF6C00</color>
+
+    <color name="tag_life_bg">#E8F5E9</color>
+    <color name="tag_life_text">#2E7D32</color>
+
+    <color name="tag_urgent_bg">#FFEBEE</color>
+    <color name="tag_urgent_text">#C62828</color>
+
+    <color name="tag_other_bg">#F5F5F5</color>
+    <color name="tag_other_text">#616161</color>
+</resources>

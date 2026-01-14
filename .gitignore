@@ -1,0 +1,23 @@
+# Android
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+temp_*.m4a
+temp_*.wav

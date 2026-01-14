@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_app">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="0dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="灵感流笔记"
+            android:textColor="@color/brand_primary"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/iv_delete_all"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="#F44336"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="批量删除"/>
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_share"
+            app:tint="#666666"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="导出分享"/>
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:tint="#666666"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="按月筛选"/>
+
+        <ImageView
+            android:id="@+id/iv_settings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_preferences"
+            app:tint="#666666"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:contentDescription="设置"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:hint="🔍 搜索任务、地点或分类..."
+            android:textColorHint="#999999"
+            android:textSize="14sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"/>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="准备就绪"
+                    android:textColor="#999999"
+                    android:textSize="12sp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="💡 智能总结"
+                    android:textColor="@color/brand_accent"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/iv_tts_speak"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_lock_silent_mode_off"
+                    app:tint="#666666"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="语音播报"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="暂无内容..."
+                android:background="@drawable/abc_popup_background_mtrl_mult"
+                android:backgroundTint="@color/white"
+                android:padding="15dp"
+                android:textColor="#555555"
+                android:lineSpacingExtra="5dp"
+                android:elevation="1dp"
+                android:layout_marginBottom="25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 待办清单"
+                android:textColor="@color/brand_accent"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_task_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="80dp"/> </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <com.example.mindflow.VoiceLineView
+                android:id="@+id/voice_line_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/et_input"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="手动输入文字..."
+                    android:background="#F5F5F5"
+                    android:padding="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"/>
+
+                <Button
+                    android:id="@+id/btn_send_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="发送"
+                    android:backgroundTint="@color/brand_primary"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_record"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="按住 录音"
+                android:backgroundTint="@color/brand_primary"
+                android:textColor="@color/white"
+                android:stateListAnimator="@null"
+                app:cornerRadius="28dp"/>
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
