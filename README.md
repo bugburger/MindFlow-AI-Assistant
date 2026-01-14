@@ -56,3 +56,9 @@ cd MindFlow_Server
 pip install -r requirements.txt
 # 配置 main.py 中的 API Key
 python main.py
+
+###2. 客户端 (Android)
+
+```bash
+修改 MainActivity.java 中的 DEFAULT_IP 为你的服务器 IP。
+使用 Android Studio 编译运行。
